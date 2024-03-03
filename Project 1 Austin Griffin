@@ -1,0 +1,88 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header with navigation links -->
+    <header>
+        <nav>
+            <!-- Navigation menu -->
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Section for home page content -->
+    <section id="home">
+        <!-- Heading -->
+        <h1>Welcome to My Website</h1>
+        <!-- Paragraph -->
+        <p>This is the homepage.</p>
+    </section>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+/* styles.css */
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+/* Navigation styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Section styles */
+section {
+    padding: 20px;
+}
+
+// script.js
+// Function to validate form input
+function validateForm() {
+    // Get input values
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
+
+    // Check if any field is empty
+    if (name == "" || email == "" || message == "") {
+        // Alert user to fill in all fields
+        alert("Please fill in all fields.");
+        // Prevent form submission
+        return false;
+    }
+    // Allow form submission if all fields are filled
+    return true;
+}
